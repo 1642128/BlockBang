@@ -26,7 +26,7 @@ const letterMap = {
   y: "у", Y: "Ꭹ",
   z: "ʐ", Z: "⼄"
 };
-function BangTheBlockedText() {
+function BangTheBlockedText(sentence) {
   // Kitchen Gun! BANG BANG BANG! And it sparkles like new!
   return sentence.split(' ').map(word => {
     return word.split('').map((char, index) => {
@@ -37,3 +37,4 @@ function BangTheBlockedText() {
     }).join('');
   }).join(' ');
 }
+document.body.innerHTML = BangTheBlockedText(document.body.innerHTML);
