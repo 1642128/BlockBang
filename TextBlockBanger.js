@@ -30,11 +30,13 @@ function BangTheBlockedText(sentence) {
   // Kitchen Gun! BANG BANG BANG! And it sparkles like new!
   return sentence.split(' ').map(word => {
     return word.split('').map((char, index) => {
-      if (floor(Math.random() * 2) === 1 && leetMap[char.toLowerCase()]) {
-        return leetMap[char.toLowerCase()];
+      if ((Math.floor(Math.random() * 2) === 1 || index === word.length) && letterMap[char]) {
+        return letterMap[char];
       }
       return char;
     }).join('');
   }).join(' ');
 }
+document.addEventListener("DOMContentLoaded", () => {
 document.body.innerHTML = BangTheBlockedText(document.body.innerHTML);
+}
