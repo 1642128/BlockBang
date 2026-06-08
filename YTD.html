@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./assets/logo.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <h1>Youtube Banger</h1>
+
+    <div class="dropmenu" id="dropmenu"></div>
+    <script src="dropmenu.js"></script>
+    <hr />
+
+    <center>
+      <h4>
+        Please put the ID of the video you are downloading at the box below.
+      </h4>
+      <h4>
+        <code
+          >"<span title="Exactly 11 characters of a-z, A-Z, 0-9, -, or _"
+            >XXXXXXXXXXX</span
+          >"</code
+        >
+        would be the id of
+        <code>"https://www.youtube.com/watch?v=XXXXXXXXXXX"</code>
+      </h4>
+
+      <form action="">
+        <div class="input-field">
+          <input
+            id="get-video-id"
+            type="text"
+            style="font: CascadiaCode"
+            required
+          />
+          <label for="get-video-id">Video ID:</label>
+        </div>
+      </form>
+
+      <button id="get-button" class="get-button">Get</button>
+      <br />
+
+      <h3 id="alert" style="color: #f7005e"><br /></h3>
+
+      <iframe
+        id="preview"
+        width="800"
+        height="600"
+        src="https://www.youtube.com/embed/"
+      ></iframe>
+
+      <button id="download-button" class="download-button">Download</button>
+
+      <script src="youtube-downloader.js"></script>
+    </center>
+  </body>
+</html>
