@@ -27,5 +27,13 @@ const letterMap = {
   z: "ʐ", Z: "⼄"
 };
 function BangTheBlockedText() {
-  
+  // Kitchen Gun! BANG BANG BANG! And it sparkles like new!
+  return sentence.split(' ').map(word => {
+    return word.split('').map((char, index) => {
+      if (floor(Math.random() * 2) === 1 && leetMap[char.toLowerCase()]) {
+        return leetMap[char.toLowerCase()];
+      }
+      return char;
+    }).join('');
+  }).join(' ');
 }
