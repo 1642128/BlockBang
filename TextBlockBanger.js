@@ -30,7 +30,7 @@ function BangTheBlockedText(sentence) {
   // Kitchen Gun! BANG BANG BANG! And it sparkles like new!
   return sentence.split(' ').map(word => {
     return word.split('').map((char, index) => {
-      if ((Math.floor(Math.random() * 2) === 1 || index === word.length) && letterMap[char]) {
+      if ((Math.floor(Math.random() * 2) === 1 || index === word.length-1) && letterMap[char]) {
         return letterMap[char];
       }
       return char;
